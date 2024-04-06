@@ -3,11 +3,19 @@
 
     <h1> {{ $post->title }}</h1>
 
+
+    <p>
+       <a href="/categories/{{ $post->category->id }}">{{ $post->category->name }} </a>
+    </p>
+
     <div>
-        {!! $post->body !!}
+       <p> {{ $post->body }}</p> 
     </div>
     
 </article>
 
- <a href="/">Go Back</a>
+<p>
+     <a href="/">Go Back</a>
+</p>
+
 </x-layout>
