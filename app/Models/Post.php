@@ -13,6 +13,8 @@ class Post extends Model
 
     protected $fillable = ['title', 'excerpt', 'body', 'slug', 'category_id'];
 
+    protected $with =['category', 'author'];
+
     public function category()
     {
 
@@ -20,10 +22,10 @@ class Post extends Model
 
     }
 
-    public function user()
+    public function author()
     {
 
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(User::class, 'user_id');
 
     }
  
