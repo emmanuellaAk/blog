@@ -1,6 +1,6 @@
 @props(['posts'])
 
-<x-layout>
+
 
     <x-post-featured-card :post="$posts[0]" />
 
@@ -18,4 +18,4 @@
 
     @endif
 
-</x-layout>
+

@@ -58,9 +58,9 @@
 
                 <div class="ml-3">
 
-                    <h5 class="font-bold">{{ $post->author->name }}</h5>
-
-                    <h6>Mascot at Laracasts</h6>
+                    <h5 class="font-bold">
+                        
+                    <a href="/authors/{{ $post->author->username }}">{{ $post->author->name }}</h5></a>
 
                 </div>
 

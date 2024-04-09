@@ -28,6 +28,7 @@
                 </a>
             </div>
         </nav>
+        
 
         {{ $slot }}
 
@@ -59,6 +60,7 @@
             </div>
         </footer>
     </section>
+    
 </body>
 
 </html>
