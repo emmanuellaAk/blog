@@ -21,9 +21,17 @@
 
         <!-- Search -->
         <div class="relative flex lg:inline-flex items-center bg-gray-100 rounded-xl ml-4">
-            <form method="GET" action="#" class="flex">
-                <input type="text" name="search" placeholder="Find something" class="flex-1 bg-transparent placeholder-black font-semibold text-sm py-2 pl-3 pr-9"
-                value="{{ request('search') }}">
+            <form method="GET" action="/"> 
+              @if (request('category'))
+                  <input type="hidden" name="category" value="{{ request('category') }}">
+              @endif
+
+                <input type="text" 
+                       name="search" 
+                       placeholder="Find something" 
+                       class="flex-1 bg-transparent placeholder-black font-semibold text-sm py-2 pl-3 pr-9"
+                       value="{{ request('search') }}"
+                >
             </form>
         </div>
     </div>

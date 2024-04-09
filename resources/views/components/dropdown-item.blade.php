@@ -5,8 +5,8 @@
  
  if ($active) $classes = 'bg-blue-500 text-white';
  @endphp
-<a 
-    {{ $attributes->merge(['class' => $classes]) }}
->
+<a {{ $attributes->merge(['class' => $classes]) }}>
     {{ $slot }}
 </a>
+
+ 
