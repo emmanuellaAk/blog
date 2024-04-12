@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use App\Models\User;
+use App\Models\Comment;
 use App\Models\Category;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -20,10 +21,12 @@ class PostFactory extends Factory
     {
         $users = User::all();
         $categories = Category::all();
+     
         return [
+
             'user_id' => $this->faker->randomElement($users),
             'category_id' => $this->faker->randomElement($categories),
-            'title' => $this->faker->sentence,
+            'title' => $this->faker->sentence(),
             'slug' => $this->faker->slug,
             'excerpt' =>'<p>' . implode('</p><p>', $this->faker->paragraphs(2)) . '</p>',
             'body' =>'<p>' . implode('</p><p>', $this->faker->paragraphs(6)) . '</p>'
