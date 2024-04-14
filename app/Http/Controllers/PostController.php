@@ -6,6 +6,7 @@ use App\Models\Post;
 use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
+use Symfony\Component\HttpFoundation\Response;
 
 class PostController extends Controller
 {
@@ -26,9 +27,9 @@ class PostController extends Controller
   
    }
 
-    public function addComment()
-    {
-        
+    public function create()
+    {   
+        return view('posts.create');
     }
 
 }
